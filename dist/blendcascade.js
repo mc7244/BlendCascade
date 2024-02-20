@@ -1,4 +1,4 @@
-/*! BlendCascade v1.0 | (c) Michele Beltrame - https://www.cattlegrid.info/ | MIT License */
+/*! BlendCascade v1.1 | (c) Michele Beltrame - https://www.cattlegrid.info/ | MIT License */
 
 blendcascade = {
   cnt: null,
@@ -8,7 +8,7 @@ blendcascade = {
   animation_speed: null,
   pieces: [],
 
-  creation_js_interval: null,
+  pieces_factory: null,
 
   init: function(args) {
     const self = this;
@@ -39,6 +39,7 @@ blendcascade = {
       }
     });
 
+    self.stop(); // Clear the div, just in case
     self.start();
   },
 
@@ -96,14 +97,14 @@ blendcascade = {
     };
 
     do_cascade();
-    self.creation_js_interval = window.setInterval(function() {
+    self.pieces_factory = window.setInterval(function() {
       do_cascade();
     }, Math.floor((self.creation_speed/2) + Math.random()*self.creation_speed));
   },
 
   stop : function() {
     const self = this;
-    window.clearInterval(self.creation_js_interval);
+    window.clearInterval(self.pieces_factory);
     self.cnt.innerHTML = '';
   }
 };
