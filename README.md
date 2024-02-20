@@ -4,9 +4,8 @@
 
 This is a simple yet effective pure JavaScript library to obtain a cascading effect.
 
-<video src="https://github.com/mc7244/BlendCascade/raw/main/demo/demovideo.webm" controls="" autoplay="" loop="">
-    <source src="https://github.com/mc7244/BlendCascade/raw/main/demo/demovideo.webm" />
-</video>
+[demovideo.webm](https://github.com/mc7244/BlendCascade/assets/86221/feec74e4-8a59-46ba-9657-78690a79164b)
+
 
 ## Tips and caveats
 
