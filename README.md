@@ -4,11 +4,9 @@
 
 This is a simple yet effective pure JavaScript library to obtain a cascading effect.
 
-<div style="width:100%;text-align:center;">
-    <video width="80%" controls="" autoplay="" loop="">
-        <source src="demo/demovideo.webm" />
-    </video>
-</div>
+<video src="demo/demovideo.webm" controls="" autoplay="" loop="">
+    <source src="demo/demovideo.webm" />
+</video>
 
 ## Tips and caveats
 
