@@ -6,6 +6,8 @@ BlendCascade is a simple yet effective pure JavaScript library to obtain a casca
 
 This is an example with falling letters, which are PNG files. Besides falling, here they also rotate (which is optional).
 
+You can find a working demo which creates this inside `demo/`.
+
 [demovideo.webm](https://github.com/mc7244/BlendCascade/assets/86221/feec74e4-8a59-46ba-9657-78690a79164b)
 
 ## Quick start
