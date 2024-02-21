@@ -15,8 +15,8 @@ blendcascade = {
 
     self.cnt = document.querySelector(args.container);
 
-    self.creation_speed = args.creation_speed || 1100;
-    self.animation_speed = args.animation_speed || '15s';
+    self.creation_speed = args.creation_speed || 1000;
+    self.animation_speed = args.animation_speed || '10s';
     self.piece_relative_width = args.piece_relative_width || 0.2;
     self.rotate_pieces = args.rotate_pieces || false;
 

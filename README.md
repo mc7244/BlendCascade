@@ -14,7 +14,7 @@ This is an example with falling letters, which are PNG files. Besides falling, h
 <div id="bgcascade_canvas" style="width:100%;height:400px;">
 </div>
 
-<div class="bgcascade_letters d-none">
+<div class="bgcascade_pieces d-none">
     <img src="img/b.webp">
     <img src="img/l.webp">
     <img src="img/e.webp">
@@ -26,14 +26,22 @@ This is an example with falling letters, which are PNG files. Besides falling, h
 window.onload = function() {
     blendcascade.init({
         container           : '#bgcascade_canvas',
-        pieces              : '.bgcascade_letters img',
+        pieces              : '.bgcascade_pieces img',
+        /* !!! The following are optional, and default to the values indicated here !!! */
+        /* Width of the falling pieces: 1/5 of the canvas, here */
         piece_relative_width: 0.2,
+        /* How often a new piece should be created */
         creation_speed      : 1000,
+        /* How long should it take for a piece to fall to the bottom */
         animation_speed     : '10s',
+        /* Wether pieces should rotate or not when talling */
         rotate_pieces       : true
     });
 };
 </script>
+
+Pieces are reusable: if you need to create multiple canvases with different parameters, you can just reuse the same
+HTML containing the pieces.
 
 ## Tips and caveats
 
