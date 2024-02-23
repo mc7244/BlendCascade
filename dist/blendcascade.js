@@ -1,4 +1,4 @@
-/*! BlendCascade v1.1 | (c) Michele Beltrame - https://www.cattlegrid.info/ | MIT License */
+/*! BlendCascade v1.2 | (c) Michele Beltrame - https://www.cattlegrid.info/ | MIT License */
 
 blendcascade = {
   cnt: null,
@@ -6,6 +6,7 @@ blendcascade = {
   cnt_height: null,
   creation_speed: null,
   animation_speed: null,
+  restart_on_resize: null,
   pieces: [],
 
   pieces_factory: null,
@@ -19,16 +20,20 @@ blendcascade = {
     self.animation_speed = args.animation_speed || '10s';
     self.piece_relative_width = args.piece_relative_width || 0.2;
     self.rotate_pieces = args.rotate_pieces || false;
+    self.restart_on_resize = args.restart_on_resize === false ? false : true;
 
     self.cnt.style.position = 'relative';
     self.cnt.style.overflow = 'hidden';
 
     self.pieces = document.querySelectorAll(args.pieces);
 
-    window.addEventListener('resize', function() {
-      self.stop();
-      self.start();
-    });
+    if ( self.restart_on_resize ) {
+      console.info("X");
+      window.addEventListener('resize', function() {
+        self.stop();
+        self.start();
+      });
+    }
 
     document.addEventListener("visibilitychange", function() {
       if (document.visibilityState == "visible") {

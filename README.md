@@ -37,7 +37,11 @@ window.onload = function() {
         /* How long should it take for a piece to fall to the bottom */
         animation_speed     : '10s',
         /* Wether pieces should rotate or not when talling */
-        rotate_pieces       : true
+        rotate_pieces       : true,
+        /* Wether to restart the animation when window is resized. Usually is should be done,
+           but works poorly on smartphones because they trigger the visibilitychange event also when
+           beginning to scroll. */
+        restart_on_resize   : true
     });
 };
 </script>
