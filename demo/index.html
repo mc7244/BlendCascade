@@ -56,9 +56,7 @@
 
       window.onload = function() {
         const bs_size = get_bs_size();
-        console.info(bs_size);
         const restart_on_resize = bs_size === 'xs' || bs_size === 's' ? false : true;
-        console.info(restart_on_resize);
         blendcascade.init({
           container           : '#bgcascade_canvas',
           pieces              : '.bgcascade_letters img',
