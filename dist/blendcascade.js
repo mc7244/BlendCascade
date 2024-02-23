@@ -28,7 +28,6 @@ blendcascade = {
     self.pieces = document.querySelectorAll(args.pieces);
 
     if ( self.restart_on_resize ) {
-      console.info("X");
       window.addEventListener('resize', function() {
         self.stop();
         self.start();
