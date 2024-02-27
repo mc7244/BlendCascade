@@ -47,6 +47,7 @@ window.onload = function() {
     });
 };
 </script>
+```
 
 Pieces are reusable: if you need to create multiple canvases with different parameters, you can just reuse the same
 HTML containing the pieces.
