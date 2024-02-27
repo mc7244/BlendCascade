@@ -1,4 +1,4 @@
-/*! BlendCascade v1.2 | (c) Michele Beltrame - https://www.cattlegrid.info/ | MIT License */
+/*! BlendCascade v1.3 | (c) Michele Beltrame - https://www.cattlegrid.info/ | MIT License */
 
 blendcascade = {
   cnt: null,
@@ -7,6 +7,7 @@ blendcascade = {
   creation_speed: null,
   animation_speed: null,
   restart_on_resize: null,
+  timing: null,
   pieces: [],
 
   pieces_factory: null,
@@ -19,6 +20,7 @@ blendcascade = {
     self.creation_speed = args.creation_speed || 1000;
     self.animation_speed = args.animation_speed || '10s';
     self.piece_relative_width = args.piece_relative_width || 0.2;
+    self.timing = args.timing || 'ease-in-out';
     self.rotate_pieces = args.rotate_pieces || false;
     self.restart_on_resize = args.restart_on_resize === false ? false : true;
 
@@ -61,7 +63,7 @@ blendcascade = {
                                                                                   : last_picked_idx + 1;
       const piece = self.pieces[last_picked_idx].cloneNode(true);
       const piece_width = Math.floor(self.cnt_width * self.piece_relative_width);
-      const piece_height = piece_width;
+      const piece_height = piece.height * piece_width / piece.width;
       piece.style.width = piece_width + 'px';
       piece.style.height = piece_height + 'px';
 
@@ -85,6 +87,7 @@ blendcascade = {
       piece.style.left = left_pos + 'px';
 
       piece.style.transition = 'all ' + self.animation_speed;
+      piece.style.animationTimingFunction = self.timing; 
       piece.addEventListener('transitionend', function() {
         self.cnt.removeChild(piece);
       });

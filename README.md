@@ -36,6 +36,8 @@ window.onload = function() {
         creation_speed      : 1000,
         /* How long should it take for a piece to fall to the bottom */
         animation_speed     : '10s',
+        /* Controls the animation-timing-function CSS property */
+        timing              : 'ease-in-out',
         /* Wether pieces should rotate or not when talling */
         rotate_pieces       : true,
         /* Wether to restart the animation when window is resized. Usually is should be done,
@@ -52,7 +54,6 @@ HTML containing the pieces.
 ## Tips and caveats
 
 * Use of transparent (WEBP or PNG) images is strongly recommended, so any collision will look good.
-* We only support exactly square images (correctly) for now. Support for rectangular images is planned. 
 
 ## Author and copyrights
 
